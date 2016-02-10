@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Kb-sp-66s">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="POO-E5-AsX">
+            <objects>
+                <navigationController id="3Kb-sp-66s" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAq-cs-5fe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9MU-3K-QFY" kind="relationship" relationship="rootViewController" id="tQl-Xr-bHL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="McK-R8-t2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-779" y="607"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Hz9-ed-yMS">
+            <objects>
+                <viewController id="9MU-3K-QFY" customClass="RootViewController" customModule="TestTransitions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Sg-td-fMB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oyl-9L-sxd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NlQ-CV-aZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="q8z-Ul-7y5">
+                                <rect key="frame" x="253" y="72" width="95" height="72"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="eSt-qA-tx7"/>
+                                    <constraint firstAttribute="width" constant="95" id="wzG-rU-HRG"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L4o-9F-16n" appends="YES" id="5V9-RJ-Qdf"/>
+                                </connections>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zuT-we-EM7">
+                                <rect key="frame" x="20" y="152" width="560" height="428"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q8z-Ul-7y5" firstAttribute="top" secondItem="4Sg-td-fMB" secondAttribute="bottom" constant="8" id="Mno-sL-NrD"/>
+                            <constraint firstItem="Oyl-9L-sxd" firstAttribute="top" secondItem="zuT-we-EM7" secondAttribute="bottom" constant="20" id="NF5-CR-OGE"/>
+                            <constraint firstItem="q8z-Ul-7y5" firstAttribute="centerX" secondItem="NlQ-CV-aZ5" secondAttribute="centerX" id="PkD-Uu-Bk6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zuT-we-EM7" secondAttribute="trailing" id="fSX-be-xZF"/>
+                            <constraint firstItem="zuT-we-EM7" firstAttribute="top" secondItem="q8z-Ul-7y5" secondAttribute="bottom" constant="8" id="i11-Dl-yvw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zuT-we-EM7" secondAttribute="leading" id="zac-23-6w4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ApV-fk-p1h"/>
+                    <connections>
+                        <outlet property="imageView" destination="q8z-Ul-7y5" id="B0K-Y9-bqH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysK-e9-AxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="L4o-9F-16n">
+                    <connections>
+                        <segue destination="UrM-lT-KC0" kind="show" identifier="openChild" id="afb-c7-KCh"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-8" y="607"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="rNS-so-A6A">
+            <objects>
+                <viewController id="UrM-lT-KC0" customClass="ImageViewController" customModule="TestTransitions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rv0-a1-4Iy"/>
+                        <viewControllerLayoutGuide type="bottom" id="kHI-7A-FJJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wLT-mA-Kvu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="K0T-uL-79X">
+                                <rect key="frame" x="0.0" y="108" width="580" height="391"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K0T-uL-79X" secondAttribute="height" multiplier="580:391" id="Ln9-Gx-cz0"/>
+                                    <constraint firstAttribute="width" constant="238" id="MoV-3B-l0Q"/>
+                                    <constraint firstAttribute="height" constant="180" id="xmr-nG-l7C"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MoV-3B-l0Q"/>
+                                        <exclude reference="xmr-nG-l7C"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dBl-xM-yfP" appends="YES" id="Us0-Mf-QU4"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K0T-uL-79X" firstAttribute="centerY" secondItem="wLT-mA-Kvu" secondAttribute="centerY" id="27Z-cq-JPU"/>
+                            <constraint firstItem="K0T-uL-79X" firstAttribute="centerX" secondItem="wLT-mA-Kvu" secondAttribute="centerX" id="D2h-5P-ett"/>
+                            <constraint firstItem="K0T-uL-79X" firstAttribute="width" secondItem="wLT-mA-Kvu" secondAttribute="width" id="VGc-6H-wft"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="K0T-uL-79X" id="eN7-FL-e6w"/>
+                        <segue destination="gPt-bq-8c3" kind="unwind" identifier="exit" unwindAction="unwind:" id="DZH-vd-gpn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCe-we-AsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gPt-bq-8c3" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="dBl-xM-yfP">
+                    <connections>
+                        <segue destination="gPt-bq-8c3" kind="unwind" unwindAction="unwind:" id="xNK-Ld-16U"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="769" y="607"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="475" height="360"/>
+    </resources>
+</document>
