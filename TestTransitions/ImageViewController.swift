@@ -15,8 +15,4 @@ class ImageViewController: UIViewController, ImageTransitionable {
             return imageView
         }
     }
-    
-    func showImageView (show: Bool) {
-        self.imageView.hidden = !show
-    }
 }

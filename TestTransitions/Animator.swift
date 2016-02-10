@@ -32,6 +32,8 @@ class Animator: NSObject, UIViewControllerAnimatedTransitioning {
         fromVC.imageViewToTransition.hidden = true
         
         let iv : UIImageView = UIImageView(image: fromVC.imageViewToTransition.image)
+        iv.contentMode = .ScaleAspectFill
+        iv.clipsToBounds = true
         containerView.addSubview(iv)
         iv.frame = containerView.convertRect(fromVC.imageViewToTransition.frame, fromView: fromView)
         

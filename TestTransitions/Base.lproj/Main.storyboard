@@ -35,12 +35,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="q8z-Ul-7y5">
-                                <rect key="frame" x="253" y="72" width="95" height="72"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="q8z-Ul-7y5">
+                                <rect key="frame" x="25" y="72" width="555" height="72"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="eSt-qA-tx7"/>
-                                    <constraint firstAttribute="width" constant="95" id="wzG-rU-HRG"/>
+                                    <constraint firstAttribute="height" constant="72" id="InU-ez-44k"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="L4o-9F-16n" appends="YES" id="5V9-RJ-Qdf"/>
@@ -56,11 +55,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q8z-Ul-7y5" firstAttribute="top" secondItem="4Sg-td-fMB" secondAttribute="bottom" constant="8" id="Mno-sL-NrD"/>
+                            <constraint firstItem="q8z-Ul-7y5" firstAttribute="top" secondItem="4Sg-td-fMB" secondAttribute="bottom" constant="8" symbolic="YES" id="AHT-vk-SFp"/>
+                            <constraint firstItem="zuT-we-EM7" firstAttribute="top" secondItem="q8z-Ul-7y5" secondAttribute="bottom" constant="8" symbolic="YES" id="EL2-VA-IKc"/>
                             <constraint firstItem="Oyl-9L-sxd" firstAttribute="top" secondItem="zuT-we-EM7" secondAttribute="bottom" constant="20" id="NF5-CR-OGE"/>
-                            <constraint firstItem="q8z-Ul-7y5" firstAttribute="centerX" secondItem="NlQ-CV-aZ5" secondAttribute="centerX" id="PkD-Uu-Bk6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zuT-we-EM7" secondAttribute="trailing" id="fSX-be-xZF"/>
-                            <constraint firstItem="zuT-we-EM7" firstAttribute="top" secondItem="q8z-Ul-7y5" secondAttribute="bottom" constant="8" id="i11-Dl-yvw"/>
+                            <constraint firstItem="q8z-Ul-7y5" firstAttribute="leading" secondItem="NlQ-CV-aZ5" secondAttribute="leadingMargin" constant="5" id="wlO-eQ-BwX"/>
+                            <constraint firstItem="q8z-Ul-7y5" firstAttribute="trailing" secondItem="zuT-we-EM7" secondAttribute="trailing" id="z83-C8-rHW"/>
                             <constraint firstAttribute="leadingMargin" secondItem="zuT-we-EM7" secondAttribute="leading" id="zac-23-6w4"/>
                         </constraints>
                     </view>
@@ -90,12 +90,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="K0T-uL-79X">
-                                <rect key="frame" x="0.0" y="108" width="580" height="391"/>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="K0T-uL-79X">
+                                <rect key="frame" x="0.0" y="73" width="600" height="454.5"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="K0T-uL-79X" secondAttribute="height" multiplier="580:391" id="Ln9-Gx-cz0"/>
                                     <constraint firstAttribute="width" constant="238" id="MoV-3B-l0Q"/>
+                                    <constraint firstAttribute="width" secondItem="K0T-uL-79X" secondAttribute="height" multiplier="475:360" id="Qbg-oV-8AI"/>
                                     <constraint firstAttribute="height" constant="180" id="xmr-nG-l7C"/>
                                 </constraints>
                                 <variation key="default">
@@ -111,10 +111,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K0T-uL-79X" firstAttribute="centerY" secondItem="wLT-mA-Kvu" secondAttribute="centerY" id="27Z-cq-JPU"/>
-                            <constraint firstItem="K0T-uL-79X" firstAttribute="centerX" secondItem="wLT-mA-Kvu" secondAttribute="centerX" id="D2h-5P-ett"/>
-                            <constraint firstItem="K0T-uL-79X" firstAttribute="width" secondItem="wLT-mA-Kvu" secondAttribute="width" id="VGc-6H-wft"/>
+                            <constraint firstItem="K0T-uL-79X" firstAttribute="centerY" secondItem="wLT-mA-Kvu" secondAttribute="centerY" id="NA2-DX-0gG"/>
+                            <constraint firstItem="kHI-7A-FJJ" firstAttribute="top" secondItem="K0T-uL-79X" secondAttribute="bottom" constant="77" id="U2L-I9-Xq9"/>
+                            <constraint firstItem="K0T-uL-79X" firstAttribute="leading" secondItem="wLT-mA-Kvu" secondAttribute="leading" id="aFe-0U-gsI"/>
+                            <constraint firstAttribute="trailing" secondItem="K0T-uL-79X" secondAttribute="trailing" id="d7l-Ze-EWU"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="U2L-I9-Xq9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="K0T-uL-79X" id="eN7-FL-e6w"/>
